@@ -56,9 +56,11 @@ struct TaskEditView: View {
                     Button("Save", action: saveAction)
                         .font(.headline)
                         .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.yellow)
                 }
             }
             .navigationBarTitle(isEditMode ? "Edit Task" : "Create Task", displayMode: .large)
+            .accentColor(.yellow)
         }
     }
     
