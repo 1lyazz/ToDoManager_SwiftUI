@@ -14,8 +14,10 @@ struct TaskEditView: View {
     @State var desc: String
     @State var dueDate: Date
     @State var scheduleTime: Bool
+    var isEditMode: Bool
     
-    init(passedTaskItem: TaskItem?, initialDate: Date) {
+    init(passedTaskItem: TaskItem?, initialDate: Date, isEditMode: Bool = true) {
+        self.isEditMode = isEditMode
         if let taskItem = passedTaskItem {
             _selectedTaskItem = State(initialValue: taskItem)
             _name = State(initialValue: taskItem.name ?? "")
@@ -31,29 +33,32 @@ struct TaskEditView: View {
     }
     
     var body: some View {
-        Form {
-            Section(header: Text("Task")) {
-                TextField("Task Name", text: $name)
-                TextField("Desc", text: $desc)
-            }
-            
-            Section(header: Text("Due Date")) {
-                Toggle("Schedule Time", isOn: $scheduleTime)
-                DatePicker("Due Date", selection: $dueDate, displayedComponents: displayComps())
-            }
-            
-            if selectedTaskItem?.isCompleted() ?? false {
-                Section(header: Text("Completed")) {
-                    Text(selectedTaskItem?.completedDate?.formatted(date: .abbreviated, time: .shortened) ?? "")
-                        .foregroundColor(.green)
+        NavigationView {
+            Form {
+                Section(header: Text("Task")) {
+                    TextField("Task Name", text: $name)
+                    TextField("Desc", text: $desc)
+                }
+                
+                Section(header: Text("Due Date")) {
+                    Toggle("Schedule Time", isOn: $scheduleTime)
+                    DatePicker("Due Date", selection: $dueDate, displayedComponents: displayComps())
+                }
+                
+                if selectedTaskItem?.isCompleted() ?? false {
+                    Section(header: Text("Completed")) {
+                        Text(selectedTaskItem?.completedDate?.formatted(date: .abbreviated, time: .shortened) ?? "")
+                            .foregroundColor(.green)
+                    }
+                }
+                
+                Section {
+                    Button("Save", action: saveAction)
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
             }
-            
-            Section {
-                Button("Save", action: saveAction)
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            }
+            .navigationBarTitle(isEditMode ? "Edit Task" : "Create Task", displayMode: .large)
         }
     }
     
@@ -80,6 +85,6 @@ struct TaskEditView: View {
 
 struct TaskEditView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskEditView(passedTaskItem: TaskItem(), initialDate: Date())
+        TaskEditView(passedTaskItem: TaskItem(), initialDate: Date(), isEditMode: false)
     }
 }

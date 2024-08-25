@@ -11,7 +11,7 @@ struct CheckBoxView: View {
 
     var body: some View {
         Image(systemName: passedTaskItem.isCompleted() ? "checkmark.circle.fill" : "circle")
-            .foregroundColor(passedTaskItem.isCompleted() ? .green : .secondary)
+            .foregroundColor(passedTaskItem.isCompleted() ? .yellow : .secondary)
             .onTapGesture {
                 withAnimation {
                     if !passedTaskItem.isCompleted() {

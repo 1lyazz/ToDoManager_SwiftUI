@@ -15,6 +15,7 @@ struct DateScroller: View {
                 Image(systemName: "arrow.left")
                     .imageScale(.large)
                     .font(Font.title.weight(.bold))
+                    .foregroundColor(.yellow)
             }
 
             Text(dateFormatted())
@@ -22,10 +23,12 @@ struct DateScroller: View {
                 .bold()
                 .animation(.none)
                 .frame(maxWidth: .infinity)
+            
             Button(action: moveForward) {
                 Image(systemName: "arrow.right")
                     .imageScale(.large)
                     .font(Font.title.weight(.bold))
+                    .foregroundColor(.yellow)
             }
         }
     }

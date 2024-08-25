@@ -12,15 +12,15 @@ struct FloatingButton: View {
             Spacer()
             HStack {
                 Spacer()
-                NavigationLink(destination: TaskEditView(passedTaskItem: nil, initialDate: dateHolder.date)
+                NavigationLink(destination: TaskEditView(passedTaskItem: nil, initialDate: dateHolder.date, isEditMode: false)
                     .environmentObject(dateHolder))
                 {
                     Text("+ New Task")
                         .font(.headline)
                 }
                 .padding(15)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
+                .foregroundColor(.black)
+                .background(Color.yellow)
                 .cornerRadius(30)
                 .padding(30)
                 .shadow(color: .black.opacity(0.3), radius: 3, x: 3, y: 3)

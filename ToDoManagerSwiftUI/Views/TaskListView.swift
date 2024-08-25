@@ -30,14 +30,18 @@ struct TaskListView: View {
 
                         .onDelete(perform: deleteItems)
                     }
+
                     .toolbar {
-                        ToolbarItem(placement: .confirmationAction) {
+                        ToolbarItemGroup(placement: .topBarLeading) {
+                            Spacer()
                             Picker("", selection: $selectedFilter.animation()) {
-                                ForEach(TaskFilter.allFilters, id: \.self) {
-                                    filter in
+                                ForEach(TaskFilter.allFilters, id: \.self) { filter in
                                     Text(filter.rawValue)
                                 }
                             }
+                            .pickerStyle(SegmentedPickerStyle())
+                            .tint(.yellow)
+                            Spacer()
                         }
                     }
 
@@ -45,7 +49,7 @@ struct TaskListView: View {
                         .environmentObject(dateHolder)
                 }
             }
-            
+
             .navigationTitle("To Do List")
         }
     }
