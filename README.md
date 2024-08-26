@@ -19,6 +19,8 @@
   - Architecture: MVVM
   - Data Storage: CoreData
 
+[1st App Version: UIKit, MVC, UserDefaults](https://github.com/1lyazz/ToDoManager)
+
 <div style="text-align: justify;">
   To-Do Manager is a simple task manager that lets you create, edit, delete, view task history and mark tasks as completed.<br>
   In the 2nd App version, I migrated from UIKit to SwiftUI, MVC to MVVM and UserDefaults to CoreData.
