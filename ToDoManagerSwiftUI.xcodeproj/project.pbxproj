@@ -3,27 +3,52 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A18980D2C7A3B3B0033DD43 /* ToDoManagerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A18980C2C7A3B3B0033DD43 /* ToDoManagerSwiftUIApp.swift */; };
-		0A18980F2C7A3B3B0033DD43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A18980E2C7A3B3B0033DD43 /* ContentView.swift */; };
 		0A1898112C7A3B3C0033DD43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1898102C7A3B3C0033DD43 /* Assets.xcassets */; };
-		0A1898142C7A3B3C0033DD43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1898132C7A3B3C0033DD43 /* Preview Assets.xcassets */; };
-		0A1898162C7A3B3C0033DD43 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1898152C7A3B3C0033DD43 /* Persistence.swift */; };
 		0A1898192C7A3B3C0033DD43 /* ToDoManagerSwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A1898172C7A3B3C0033DD43 /* ToDoManagerSwiftUI.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A1898092C7A3B3B0033DD43 /* ToDoManagerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoManagerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A18980C2C7A3B3B0033DD43 /* ToDoManagerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoManagerSwiftUIApp.swift; sourceTree = "<group>"; };
-		0A18980E2C7A3B3B0033DD43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A1898102C7A3B3C0033DD43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0A1898132C7A3B3C0033DD43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0A1898152C7A3B3C0033DD43 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0A1898182C7A3B3C0033DD43 /* ToDoManagerSwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoManagerSwiftUI.xcdatamodel; sourceTree = "<group>"; };
+		0A18984D2C7B3F120033DD43 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0A1898242C7A48110033DD43 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CheckBoxView.swift,
+				DateScroller.swift,
+				FloatingButton.swift,
+				TaskCell.swift,
+				TaskEditView.swift,
+				TaskListView.swift,
+			);
+			target = 0A1898082C7A3B3B0033DD43 /* ToDoManagerSwiftUI */;
+		};
+		0A1898322C7A61750033DD43 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DateHolder.swift,
+				Persistence.swift,
+				TaskFilter.swift,
+				TaskItemExtension.swift,
+			);
+			target = 0A1898082C7A3B3B0033DD43 /* ToDoManagerSwiftUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0A1898212C7A47E70033DD43 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0A1898242C7A48110033DD43 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		0A1898312C7A61630033DD43 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0A1898322C7A61750033DD43 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0A1898062C7A3B3B0033DD43 /* Frameworks */ = {
@@ -39,6 +64,7 @@
 		0A1898002C7A3B3B0033DD43 = {
 			isa = PBXGroup;
 			children = (
+				0A18984D2C7B3F120033DD43 /* README.md */,
 				0A18980B2C7A3B3B0033DD43 /* ToDoManagerSwiftUI */,
 				0A18980A2C7A3B3B0033DD43 /* Products */,
 			);
@@ -56,21 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				0A18980C2C7A3B3B0033DD43 /* ToDoManagerSwiftUIApp.swift */,
-				0A18980E2C7A3B3B0033DD43 /* ContentView.swift */,
+				0A1898212C7A47E70033DD43 /* Views */,
+				0A1898312C7A61630033DD43 /* Model */,
 				0A1898102C7A3B3C0033DD43 /* Assets.xcassets */,
-				0A1898152C7A3B3C0033DD43 /* Persistence.swift */,
 				0A1898172C7A3B3C0033DD43 /* ToDoManagerSwiftUI.xcdatamodeld */,
-				0A1898122C7A3B3C0033DD43 /* Preview Content */,
 			);
 			path = ToDoManagerSwiftUI;
-			sourceTree = "<group>";
-		};
-		0A1898122C7A3B3C0033DD43 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0A1898132C7A3B3C0033DD43 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1898142C7A3B3C0033DD43 /* Preview Assets.xcassets in Resources */,
 				0A1898112C7A3B3C0033DD43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,8 +159,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1898162C7A3B3C0033DD43 /* Persistence.swift in Sources */,
-				0A18980F2C7A3B3B0033DD43 /* ContentView.swift in Sources */,
 				0A18980D2C7A3B3B0033DD43 /* ToDoManagerSwiftUIApp.swift in Sources */,
 				0A1898192C7A3B3C0033DD43 /* ToDoManagerSwiftUI.xcdatamodeld in Sources */,
 			);
@@ -279,25 +293,32 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ToDoManagerSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2D298QL4HC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gmail-zablotski.ToDoManagerSwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,25 +329,32 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ToDoManagerSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2D298QL4HC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gmail-zablotski.ToDoManagerSwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
